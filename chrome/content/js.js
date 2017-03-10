@@ -60,12 +60,15 @@
 				downloadLink.click();
 			},
 			nav:function() {
-				var a=document.getElementsByName("45297anc");
-				if (a.length==1) a[0].click();
+				/** this one is for Spanish version (not confirmed) */
+				//var a=document.getElementsByName("45297anc");
+				/** this one is for English version (confirmed, March 2017) */
+				var a=document.getElementsByName("43169anc");
+				if (a.length==1) a[0].click();				
 			},
 			run:function(doc){
 				setTimeout(this.save,2000);
-				//setTimeout(this.nav,5000);
+				setTimeout(this.nav,5000);
 			}
 		}
 		obj.run(doc);
