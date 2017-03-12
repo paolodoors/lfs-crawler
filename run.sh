@@ -23,3 +23,8 @@ echo "ok"
 echo -n "Creating result ... "
 python join.py
 echo "ok"
+
+echo -n "Backing up original htmls ... "
+mkdir -p out/htmls/
+cp -pr html/orig/* out/htmls/
+echo "ok"

@@ -11,3 +11,4 @@ out/*epub
 .settings/*
 .pydevproject
 *.pyc
+out/htmls/*
