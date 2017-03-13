@@ -99,9 +99,14 @@ for f in htmls:
 			n[0].unwrap()
 
 	for a in soup.select("a"):
-		if "ObjLayerActionGoTo" in a.attrs['href']:
-			a.attrs['href']=hr.sub("\\1",a.attrs['href'])
-
+		# this error occured in <a onclick="..."></a> tags
+		try:
+			if "ObjLayerActionGoTo" in a.attrs['href']:
+				a.attrs['href']=hr.sub("\\1",a.attrs['href'])
+		except KeyError:
+			print "Exception KeyError caught in file '" + f + "'!"
+			print a
+			pass
 	for n in soup.html:
 		if isinstance(n, bs4.Comment) or isinstance(n, bs4.NavigableString):
 			n.extract()
