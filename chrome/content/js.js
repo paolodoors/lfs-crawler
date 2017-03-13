@@ -28,8 +28,8 @@
 				var i,a;
 				for (i=(toc.selectedOptions[0].index-1);(i>=0 && ch==null);i--) {
 					a=toc.options[i].label.replace(/^\s+|\s+$/g,"")
-					if (/^(Cap|ch)\.\s+(\d+)\..+$/i.test(a)) {
-						ch=a.replace(/^(Cap|ch)\.\s+(\d+)\..+$/ig,"$2");
+					if (/^Session\s+(\d+).+$/i.test(a)) {
+						ch=a.replace(/^Session\s+(\d+).+$/ig,"$1");
 					}
 				}
 				if (ch==null) return;
@@ -48,7 +48,7 @@
 					img.src=img.src;
 				}
 
-				var f="LFS201_"+title+".html";
+				var f="LFS265_"+title+".html";
 
 				var textToWrite = document.documentElement.outerHTML;
 				var textFileAsBlob = new Blob([textToWrite], {type:'text/html'});
@@ -63,7 +63,7 @@
 				/** this one is for Spanish version (not confirmed) */
 				//var a=document.getElementsByName("45297anc");
 				/** this one is for English version (confirmed, March 2017) */
-				var a=document.getElementsByName("43169anc");
+				var a=document.getElementsByName("16anc");
 				if (a.length==1) a[0].click();				
 			},
 			run:function(doc){
