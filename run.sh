@@ -13,7 +13,7 @@ else
 #	rm html/clean/* 2> /dev/null
 #	rm -f md/* 2> /dev/null
 	cp html/orig/* html/clean/
-	rename 's/_popup.html$/_popup (0).html/' html/clean/*.html
+	rename 's/_popup.html$/_popup (0).html/' html/clean/*.html || true
 	echo "ok"
 fi
 echo -n "Cleaning html ... "
