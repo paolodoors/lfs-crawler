@@ -56,7 +56,7 @@
 				var downloadLink = document.createElement("a");
 				downloadLink.download = fileNameToSaveAs;
 				downloadLink.innerHTML = "Download File";
-				downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+				downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
 				downloadLink.click();
 			},
 			nav:function() {
