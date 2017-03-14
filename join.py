@@ -102,7 +102,8 @@ for ht in hts:
 		h=b.p.extract()#.strong
 		h.attrs.clear()
 		h.name="h1"
-		h.string=sp.sub(" ",h.get_text()).strip('.')[9:].strip()
+#		h.string=sp.sub(" ",h.get_text()).strip('.')[9:].strip()
+                h.string=sp.sub(" ",h.get_text())
 		h.attrs['id']="c"+str(ca)
 		set_anchor(h,ca)
 		divCp=soup.new_tag("div", **{"id":"cp"+str(ca)})
