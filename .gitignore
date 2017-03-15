@@ -12,3 +12,4 @@ out/*epub
 .pydevproject
 *.pyc
 out/htmls/*
+out/imgs/*
