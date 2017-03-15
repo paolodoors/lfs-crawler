@@ -98,7 +98,8 @@ https://training.linuxfoundation.org/certification).
   `join.py`).
 
 * Current version don't save images, audio and video materials &mdash;
-  only text is saved.
+  only text is saved (plus images from popups if you execute
+  `img-extractor.sh` in `lfs-crawler/out/` after `run.sh`).
 
 * Current version have problems with hyperlinks (they're implemented
   as javascript functions with names `hyperlink***`, not as `<a
