@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-CHROME_DOWNLOAD_PATH=~/Downloads/
+CHROME_DOWNLOAD_PATH=/tmp/lfs258
 
 if [ "$1" == "-r" ]; then
 	rm ${CHROME_DOWNLOAD_PATH}/LF*.html 2> /dev/null

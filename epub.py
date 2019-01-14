@@ -10,7 +10,7 @@ os.chdir(dname)
 
 out="out/epub.html"
 
-soup=util.get_soup("out/LFS201.html")
+soup=util.get_soup("out/LFS258.html")
 soup.head.link.attrs['href']="rec/epub.css"
 
 for h in soup.findAll(["h1","legend"]):
@@ -36,4 +36,4 @@ with open(out, "wb") as file:
 	file.write(code.encode('utf8'))
 
 os.chdir("out")
-call(["miebup", "epub.html", "LFS201.epub"])
+call(["miebup", "epub.html", "LFS258.epub"])

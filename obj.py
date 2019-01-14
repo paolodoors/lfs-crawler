@@ -9,7 +9,7 @@ os.chdir(dname)
 
 out="out/Objetivos.html"
 
-soup=util.get_soup("out/LFS201.html")
+soup=util.get_soup("out/LFS258.html")
 soup.title.string=soup.title.string+": Objetivos"
 
 flds=soup.findAll("fieldset", attrs={'class': re.compile(r".*\bn2\b.*")})

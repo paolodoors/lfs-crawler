@@ -10,7 +10,7 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
-cp=re.compile(".*?LFS201_(\d+)\..*$")
+cp=re.compile(".*?LFS258_(\d+)\..*$")
 pr=re.compile("(.*)¿(.*?)-(.*)")
 ck=re.compile("(Haga|Haz) click (en|sobre) (el|los|en)", re.UNICODE|re.MULTILINE|re.DOTALL)
 fg=re.compile(".*?(Figura|Figure)\s+\d+\.\d+(:|.)", re.UNICODE|re.MULTILINE|re.DOTALL)
@@ -22,7 +22,7 @@ caB=0
 n=0
 f=0
 
-oht="out/LFS201.html"
+oht="out/LFS258.html"
 
 def find_fld(soup,r,tipo=None,txt=None):
 	rt=[]
@@ -75,13 +75,14 @@ def get_lab(f,txt):
 	a.string=txt
 	return a
 
-soup = util.get_tpt("LFS201","rec/lfs201.css")
+soup = util.get_tpt("LFS258","rec/lfs258.css")
 
 fldB=None
 divCp=None
 
 hts=sorted(glob.glob('html/clean/*.html'))
 for ht in hts:
+	print(ht)
 	soup2 = util.get_soup(ht)
 	t=soup2.title
 	b=soup2.body
